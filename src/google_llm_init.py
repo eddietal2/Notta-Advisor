@@ -5,11 +5,14 @@ Initializes Llama Index's Google AI integration.
 import os
 import sys
 from dotenv import load_dotenv
-import custom_console
+from . import custom_console
 from llama_index.llms.google_genai import GoogleGenAI
 
 # Load environment variables from .env file
-load_dotenv()
+try:
+    load_dotenv()
+except UnicodeDecodeError:
+    print("Warning: .env file has encoding issues in google_llm_init. Skipping.")
 
 GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
 
