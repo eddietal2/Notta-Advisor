@@ -5,10 +5,11 @@ Notta Advisor is a portfolio project designed to showcase advanced AI engineerin
 
 The application functions as a scheduled, personalized investment analysis tool that critically assesses current market data against foundational financial wisdom.
 
-Key Features
+# Key Features
+
 Agentic Workflow: The core of the project is an AI Agent built with Llama Index and powered by the Gemini API. This agent can autonomously plan, reason, and execute multi-step tasks.
 
-Multi-Modal Data Ingestion (RAG & Tools):
+# Multi-Modal Data Ingestion (RAG & Tools):
 
 RAG (Fundamental Wisdom): The Agent is grounded in the principles of value investing by indexing and retrieving information from the classic text, "The Intelligent Investor."
 
@@ -24,7 +25,7 @@ Personalization: Tailoring the analysis based on user-selected investment intere
 
 Automated Delivery: The final, synthesized analysis is delivered directly to subscribers via email.
 
-Goal
+# Goal
 To demonstrate expertise in building a production-ready, scheduled, data-driven AI system that moves beyond simple Q&A and into complex, reasoned task execution.
 
 Disclaimer: Notta Advisor is for educational and illustrative purposes only and does not constitute financial advice.
