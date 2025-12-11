@@ -1,103 +1,30 @@
-Llama Chat
+# Notta Advisor
 
-💬 A Simple and Efficient Chat Interface Powered by Llama Models
+💬 Concept
+Notta Advisor is a portfolio project designed to showcase advanced AI engineering techniques, primarily Retrieval-Augmented Generation (RAG) and Agentic Design, within a full-stack web application.
 
-Welcome to Llama Chat! This repository hosts a minimal and easy-to-use chat application that leverages the power of the Llama family of large language models. The goal is to provide a straightforward setup for experimentation, deployment, and interaction with Llama models in a conversational format.
+The application functions as a scheduled, personalized investment analysis tool that critically assesses current market data against foundational financial wisdom.
 
-✨ Features
+Key Features
+Agentic Workflow: The core of the project is an AI Agent built with Llama Index and powered by the Gemini API. This agent can autonomously plan, reason, and execute multi-step tasks.
 
-Llama Model Integration: Easily connect to local or hosted Llama model endpoints (e.g., via Hugging Face, Ollama, or a custom API).
+Multi-Modal Data Ingestion (RAG & Tools):
 
-Conversational Memory: Maintains chat history within the session to enable context-aware responses.
+RAG (Fundamental Wisdom): The Agent is grounded in the principles of value investing by indexing and retrieving information from the classic text, "The Intelligent Investor."
 
-Markdown Rendering: Displays model responses with proper formatting (e.g., code blocks, lists, bold text).
+Tool Use (Market Data): The Agent uses a custom Python function (built with yfinance) to fetch real-time and historical data for key high-growth stocks ("Mag 10").
 
-Simple Interface: A clean, minimalist user interface designed for focused interaction.
+Full-Stack Delivery (Django): The application is built on Django, providing a robust framework for:
 
-Easy Configuration: Quick setup to swap out different Llama variants or adjust generation parameters.
+User Management: Collecting and persisting user subscriptions via a simple one-page interface.
 
-⚙️ Prerequisites
+Asynchronous Scheduling: Utilizing Celery Beat to trigger the complex analysis task reliably every Monday at 9:00 AM.
 
-Before you begin, ensure you have the following installed:
+Personalization: Tailoring the analysis based on user-selected investment interests (e.g., emphasizing Growth Stocks vs. Risk).
 
-Python (3.9+): The core language used for the backend logic and model interaction.
+Automated Delivery: The final, synthesized analysis is delivered directly to subscribers via email.
 
-Pip: Python package installer (usually included with Python).
+Goal
+To demonstrate expertise in building a production-ready, scheduled, data-driven AI system that moves beyond simple Q&A and into complex, reasoned task execution.
 
-A Llama Endpoint/API: Access to a running Llama model (e.g., using Ollama, VLLM, or a cloud provider's API key).
-
-🚀 Installation
-
-Follow these steps to get your local instance of Llama Chat running.
-
-1. Clone the Repository
-
-git clone [https://github.com/eddietal2/llama_chat.git](https://github.com/eddietal2/llama_chat.git)
-cd llama_chat
-
-
-2. Create a Virtual Environment
-
-It's highly recommended to use a virtual environment to manage dependencies:
-
-# Create the environment (Linux/macOS)
-python3 -m venv venv
-
-# Activate the environment (Linux/macOS)
-source venv/bin/activate
-
-# Activate the environment (Windows)
-.\venv\Scripts\activate
-
-
-3. Install Dependencies
-
-Install the necessary Python packages. This project typically uses libraries like streamlit or flask for the front end and llama-cpp-python or requests for the model interaction.
-
-pip install -r requirements.txt
-
-
-4. Configuration
-
-You must set your Llama model API endpoint or configuration variables.
-
-Create a file named .env in the root directory.
-
-Add your model configuration details. If using an external API, it might look like this:
-
-# Example for an external API
-LLAMA_API_URL="http://localhost:8000/v1/chat/completions"
-# Or, if using an API Key
-# API_KEY="your-secret-key-here"
-
-
-If running a local model, check the documentation for how to specify the model path or name.
-
-🛠️ Usage
-
-Running the Chat Application
-
-Assuming the application uses Streamlit for its interface (a common choice for quick Python ML demos):
-
-streamlit run app.py
-
-
-If it uses a Flask/FastAPI backend:
-
-# Example: using uvicorn for FastAPI
-uvicorn main:app --reload
-
-
-The application will typically open in your web browser at http://localhost:8501 (for Streamlit) or http://127.0.0.1:8000 (for FastAPI).
-
-Interacting with the Model
-
-Type your message into the input box.
-
-Press Enter or click the Send button.
-
-The Llama model will process your query and stream its response back into the chat window.
-
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Disclaimer: Notta Advisor is for educational and illustrative purposes only and does not constitute financial advice.
