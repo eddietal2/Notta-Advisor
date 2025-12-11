@@ -4,6 +4,7 @@ from . import google_llm_init as google
 from llama_index.core.agent.workflow import FunctionAgent
 from . import custom_console
 from .config import YEARS
+from datetime import datetime
 
 def create_tools(index_set):
     # Creating Query Engines (tools) for each VectorStoreIndex
@@ -52,19 +53,21 @@ async def run_chat(agent):
         print(f"Type: {type(response)}, Data: {response._data}")
         print(f"{custom_console.COLOR_YELLOW}\nAgent{custom_console.RESET_COLOR}: {response}\n")
 
-def create_agent(index_set):
+def create_agent(index_set, verbose=False):
     tools = create_tools(index_set)
 
     # system_prompt.txt to be used for Agents' System Prompt.
     with open("system_prompt.txt", "r", encoding="utf-8") as f:
         loaded_system_prompt = f.read()
-        print(f"{loaded_system_prompt}\n")
+        loaded_system_prompt += f"\n\nCurrent date: {datetime.now().strftime('%Y-%m-%d')}"
+        if verbose:
+            print(f"{loaded_system_prompt}\n")
 
     agent = FunctionAgent(
         tools=tools,
         llm=google.llm,
         system_prompt=loaded_system_prompt,
-        verbose=True,
+        verbose=verbose,
         name="uber_previous_finance_agent",
         description="AI Agent for Analyzing previous Uber financial years, from 2019 - 2022"
     )
