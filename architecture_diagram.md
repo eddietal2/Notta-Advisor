@@ -71,5 +71,4 @@ graph TB
     GLLM -.->|"Initialize Gemini"| GEMINI
     FUNC_AGENT -.->|"RAG Chat"| CHAT
     CONSOLE -.->|"Format Output"| UI
-```</content>
-<parameter name="filePath">c:\Users\eddie\OneDrive\Documents\Web Projects\CLI_Chat\architecture_diagram.md
+```

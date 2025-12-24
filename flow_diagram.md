@@ -30,7 +30,5 @@ flowchart TD
     class C,D,E,F,G,H,I,J process
     class B,L decision
     class P end
-    class B,L decision
-    class P end
 ```</content>
 <parameter name="filePath">c:\Users\eddie\OneDrive\Documents\Web Projects\CLI_Chat\flow_diagram.md
