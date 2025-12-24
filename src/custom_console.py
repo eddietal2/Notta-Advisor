@@ -76,7 +76,7 @@ def start_process_timer():
     global start_time
     start_time = time.time()
     print(f"""
-    {COLOR_CYAN}~ ChiLLama Chat 🤖{RESET_COLOR}
+    {COLOR_CYAN}~ Gemi 🤖{RESET_COLOR}
 """)
     print(r"""
     |oooo|        |oooo|

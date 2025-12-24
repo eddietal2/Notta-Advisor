@@ -43,7 +43,7 @@ async def run_chat(agent):
 
     # User Input
     while True:
-        text_input = input(f"{custom_console.COLOR_CYAN}~ ChiLLama Chat 🤖: {custom_console.RESET_COLOR}")
+        text_input = input(f"{custom_console.COLOR_CYAN}~ Gemi 🤖: {custom_console.RESET_COLOR}")
         if text_input.lower() == "exit":
             print("\n" + "-"*30 + " ~ Llama Chat Closing " + "-"*30)
             custom_console.process_timer_elapsed_time_success()
