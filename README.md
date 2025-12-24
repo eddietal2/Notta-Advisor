@@ -75,6 +75,30 @@ Gemi_Chat/
 - **`custom_console.py`**: Spinners, colors, timers.
 - **`google_llm_init.py`**: Google Gemini LLM initialization.
 
+## 🏗️ Architecture
+
+The CLI_Chat application follows a modular RAG (Retrieval-Augmented Generation) architecture:
+
+### System Overview
+```
+CLI Interface → Data Processing → Vector Indexing → AI Agent → Chat Interface
+```
+
+### Core Components Flow
+1. **Data Pipeline**: HTML SEC filings → Document parsing → Vector embeddings → Persistent storage
+2. **Query Pipeline**: User question → Index retrieval → Context augmentation → LLM generation → Response
+3. **Agent System**: FunctionAgent with specialized tools for multi-year financial analysis
+
+### Architecture Diagrams
+- **[Detailed Component Diagram](architecture_diagram.md)**: Complete system architecture with all modules and dependencies
+- **[Process Flow Diagram](flow_diagram.md)**: High-level user journey and data flow
+
+### Key Technologies
+- **LlamaIndex**: Vector indexing, query engines, and agent framework
+- **Google Gemini**: LLM for generation and embeddings for semantic search
+- **Unstructured.io**: Document parsing for HTML SEC filings
+- **RAG Pattern**: Retrieval-augmented generation for accurate financial analysis
+
 ## 🤝 Contributing
 
 1. Fork the repo.
