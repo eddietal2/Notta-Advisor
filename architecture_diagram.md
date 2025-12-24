@@ -49,12 +49,12 @@ graph TB
     end
 
     %% Styling
-    classDef entry fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef config fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef data fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef ai fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    classDef ui fill:#fce4ec,stroke:#880e4f,stroke-width:2px
-    classDef external fill:#f5f5f5,stroke:#424242,stroke-width:1px
+    classDef entry fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b
+    classDef config fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#4a148c
+    classDef data fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px,color:#1b5e20
+    classDef ai fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100
+    classDef ui fill:#fce4ec,stroke:#880e4f,stroke-width:2px,color:#880e4f
+    classDef external fill:#f5f5f5,stroke:#424242,stroke-width:1px,color:#424242
 
     class CLI,ARG entry
     class CONFIG,ENV,PATHS config
